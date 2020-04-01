@@ -1,0 +1,35 @@
+<mat-grid-list cols="1" rowHeight="3:1">
+  <mat-grid-tile>
+    <mat-card class="card-center">
+      <form [formGroup]="updateForm">
+        <mat-card-content>
+          <div>
+            <mat-form-field>
+              <mat-label>Name</mat-label>
+              <input formControlName="name" matInput>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <mat-label>Description</mat-label>
+              <input formControlName="description" matInput>
+            </mat-form-field>
+          </div>
+          <div>
+            <button mat-raised-button [disabled]="!updateForm.valid" color="primary" class="save_btn" style="margin-right:5px;" (click)="save()">Save</button>
+          </div>
+          <div>
+            <button mat-raised-button color="accent" class="save_btn" (click)="delete()">Delete</button>
+          </div>
+          <div>
+            <button routerLink="/dashboard/list" mat-raised-button style="margin-right:5px;">
+              Back to Dashboard
+            </button>
+          </div>
+        </mat-card-content>
+      </form>
+
+    </mat-card>
+
+  </mat-grid-tile>
+</mat-grid-list>

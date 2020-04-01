@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "password": "user1"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "user2"
+    },
+    {
+      "id": 3,
+      "username": "alex",
+      "password": "123"
+    },
+    {
+      "id": 4,
+      "username": "alex2",
+      "password": "qwer"
+    }
+  ],
+  "todo_list": [
+    {
+      "id": 1,
+      "name": "nameq",
+      "description": "descriptionwqe",
+      "createdAt": "2020-04-01T02:43:00.000Z",
+      "editedAt": "2020-04-01T02:49:01.565Z"
+    },
+    {
+      "id": 2,
+      "name": "ww",
+      "description": "ewqr",
+      "createdAt": "2020-04-01T03:04:00.000Z",
+      "editedAt": "2020-04-01T03:05:26.461Z"
+    },
+    {
+      "id": 3,
+      "name": "grgwy",
+      "description": "erqwtqrhqjj",
+      "createdAt": "2020-04-01T03:04:00.000Z",
+      "editedAt": "2020-04-01T03:37:18.440Z"
+    }
+  ]
+}

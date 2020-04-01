@@ -1,0 +1,35 @@
+<mat-grid-list cols="1" rowHeight="3:1">
+  <mat-grid-tile>
+    <mat-card class="card-center">
+      <mat-card-title>
+        login
+      </mat-card-title>
+      <form [formGroup]="loginForm" >
+        <mat-card-content>
+          <div>
+            <mat-form-field>
+              <mat-label>Username</mat-label>
+              <input formControlName="username" matInput>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <mat-label>Password</mat-label>
+              <input formControlName="password" matInput type="password">
+            </mat-form-field>
+          </div>
+          <div>
+            <button mat-raised-button color="primary" style="margin-right:5px;" (click)="login()">Login</button>
+          </div>
+          <div>
+            <button routerLink="/auth/registration" mat-raised-button style="margin-right:5px;">Go to
+              Registration page
+            </button>
+          </div>
+        </mat-card-content>
+      </form>
+
+    </mat-card>
+
+  </mat-grid-tile>
+</mat-grid-list>

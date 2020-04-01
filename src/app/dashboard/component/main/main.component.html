@@ -1,0 +1,38 @@
+
+<div class = "add_btn">
+  <button mat-raised-button routerLink="/dashboard/create">Add todo</button>
+  <button mat-raised-button (click)="logout()">Log out</button>
+</div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Number </th>
+    <td mat-cell *matCellDef="let element; let i = index">{{i+1}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Title </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="createdAt">
+    <th mat-header-cell *matHeaderCellDef> Created At</th>
+    <td mat-cell *matCellDef="let element"> {{element.createdAt}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="editedAt">
+    <th mat-header-cell *matHeaderCellDef> Editad At</th>
+    <td mat-cell *matCellDef="let element"> {{element.editedAt}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Action">
+    <th mat-header-cell *matHeaderCellDef> Action</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-raised-button color="primary" class="cust_margin_btn" (click)="edit(element)">Edit</button>
+      <button mat-raised-button color="accent" (click)="delete(element)">Delete</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
